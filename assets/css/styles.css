@@ -1,0 +1,408 @@
+
+
+/* =================== 📌 General Layout & Responsive Design =================== */
+.investment-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+}
+
+.left-chart-area {
+  width: 68%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.right-investment-area {
+  width: 30%;
+}
+
+@media screen and (max-width: 1024px) {
+  .investment-section {
+    flex-direction: column;
+  }
+  .left-chart-area, .right-investment-area {
+    width: 100%;
+  }
+}
+
+
+
+
+/* =================== 📌 Trending Stocks Section =================== */
+.trending-container {
+  background: #EAE7DC;
+  padding: 25px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.trending-item {
+  padding: 8px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.trending-stocks h2::before {
+  content: "";
+  margin-right: 10px;
+}
+
+/* =================== 📌 Chart Card Section =================== */
+.chart-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.chart-card canvas {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 300px;
+}
+
+
+/* =================== 📌 Floating Support Button & Chat =================== */
+#support-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(1, 97, 193, 0);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#support-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+#support-chat {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 320px;
+  height: 400px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  display: none;
+  flex-direction: column;
+}
+
+.chat-header {
+  background: #007bff;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.chat-header button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Responsive Chat */
+@media (max-width: 600px) {
+  #support-chat {
+    width: 90%;
+    right: 5%;
+  }
+}
+
+
+
+/* ========================== */
+/* 🌟 GENERAL STYLES */
+/* ========================== */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+}
+
+/* ========================== */
+/* 🌟 INVESTMENT SECTION */
+/* ========================== */
+
+.investment-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  align-items: flex-start;
+}
+
+/* LEFT SIDE (Charts) */
+.left-chart-area {
+  flex: 1;
+  min-width: 65%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* RIGHT SIDE (Investment Details) */
+.right-investment-area {
+  flex: 1;
+  min-width: 30%;
+  max-width: 350px;
+}
+
+/* INVESTMENT CARD */
+.investment-card {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  position: relative;
+}
+
+.investment-card:hover {
+  background: #e9ecef;
+}
+
+.arrow-icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.1rem;
+  color: #333;
+  transition: transform 0.3s ease;
+  pointer-events: none;
+}
+
+
+/* Rotate arrow when expanded */
+.expanded .arrow-icon {
+  transform: rotate(180deg);
+}
+
+/* TABLE */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.table th, .table td {
+  padding: 20px;
+  text-align: left;
+}
+
+.table th {
+  background: #d6eaf8;
+}
+
+/* ========================== */
+/* 🌟 CHART STYLES */
+/* ========================== */
+
+.chart-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+}
+
+/* FIX PIE CHART STRETCHING */
+.chart-card canvas {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 300px;
+}
+
+/* TRADINGVIEW WIDGET */
+.tradingview-widget-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 2;
+  max-width: 100%;
+  padding: 0px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+
+/* ========================== */
+/* 🌟 FLOATING BUTTONS & SUPPORT CHAT */
+/* ========================== */
+
+/* FLOATING SUPPORT BUTTON */
+#support-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+#support-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+#support-icon:hover {
+  transform: scale(1.1);
+}
+
+/* SUPPORT CHAT WINDOW */
+#support-chat {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 320px;
+  height: 400px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  display: none;
+  flex-direction: column;
+}
+
+/* CHAT HEADER */
+.chat-header {
+  background: #007bff;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.chat-header button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* CHAT BODY */
+.chat-body {
+  flex-grow: 1;
+  padding: 10px;
+}
+
+/* ========================== */
+/* 🌟 LATEST NEWS & TRENDING STOCKS */
+/* ========================== */
+
+.news-container, .trending-stocks {
+  background: #EAE7DC;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 1600px;
+  margin: 20px auto;
+}
+
+.news-container h4, .trending-stocks h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.news-item, .stock-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.news-title, .stock-name {
+  font-weight: bold;
+  font-size: 18px;
+  flex-grow: 1;
+}
+
+.news-link, .stock-price {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: color 0.2s ease-in-out;
+}
+
+.news-link:hover, .stock-price:hover {
+  color: black;
+}
+
+/* ========================== */
+/* 🌟 RESPONSIVE DESIGN */
+/* ========================== */
+
+@media screen and (max-width: 1024px) {
+  .investment-section {
+      flex-direction: column;
+  }
+  .left-chart-area, .right-investment-area {
+      width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .news-container, .trending-stocks {
+      padding: 20px;
+  }
+  .stock-item {
+      font-size: 16px;
+  }
+  .news-title {
+      font-size: 16px;
+  }
+  .dashboard-container {
+      flex-direction: column;
+      align-items: center;
+  }
+  .tradingview-widget-container, .investment-card {
+      max-width: 100%;
+      width: 90%;
+  }
+}
+
+/* Support Chat Mobile */
+@media (max-width: 600px) {
+  #support-chat {
+      width: 90%;
+      right: 5%;
+  }
+}
