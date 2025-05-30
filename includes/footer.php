@@ -22,7 +22,8 @@
             </div>
             <div class="row">
                 <div class="col-12">
-                    <p>&copy; 2025 InvestSmart. All rights reserved.</p>
+                     <p class="copyright ">© 2025 <a href="https://devmaxstudio.com " target="_blank " style="color: inherit; text-decoration: none; ">DEVMAX STUDIO</a>. All rights reserved.</p>
+      
                 </div>
             </div>
         </div>
